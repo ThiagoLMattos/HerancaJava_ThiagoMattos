@@ -1,27 +1,68 @@
-# Gerenciador de Funcionários 👥
+# 👥 Gerenciador de Funcionários
 
-Um sistema simples em Java para cadastro, listagem e execução de ações de funcionários, com base em herança e polimorfismo.  
-Feito para fins de aprendizado e prática com POO.
+---
 
-## Funcionalidades ✨
+## 📚 Sumário
+- [📌 Introdução](#-introdução)
+- [🧠 Funcionalidades](#-funcionalidades)
+- [⚙️ Como instalar e executar](#%EF%B8%8F-como-instalar-e-executar)
+- [💠 Tecnologias utilizadas](#-tecnologias-utilizadas)
+- [📄 Licença](#-licença)
 
-- Cadastro de Funcionários:
-  - Gerente
-  - Desenvolvedor
-  - Estagiário
+---
 
-- Listagem de todos os funcionários cadastrados
-- Execução de ações específicas:
-  - Gerente: `realizarReuniao()`
-  - Desenvolvedor: `programar()`
-  - Estagiário: `fazerTarefa()`
-- Ação comum para todos os funcionários: `baterPonto()`
+## 📌 Introdução
 
-## Como usar 🛠️
+Sistema simples em Java para cadastro, listagem e execução de ações de funcionários, com base em herança e polimorfismo.  
+Feito para fins de aprendizado e prática com Programação Orientada a Objetos (POO).
 
-1. Compile todos os arquivos `.java`:
+---
+
+## 🧠 Funcionalidades
+
+• Cadastro de Funcionários (Gerente, Desenvolvedor, Estagiário)  
+• Listagem de todos os funcionários cadastrados  
+• Execução de ações específicas por tipo de funcionário:  
+  - Gerente: `realizarReuniao()`  
+  - Desenvolvedor: `programar()`  
+  - Estagiário: `fazerTarefa()`  
+• Ação comum a todos: `baterPonto()`
+
+---
+
+## ⚙️ Como instalar e executar
+
+1. Clone o repositório:
 
 ```bash
-javac -source 8 -target 8 *.java
+git clone https://github.com/seu-usuario/gerenciador-funcionarios.git
+cd gerenciador-funcionarios
+```
+
+2. Compile todos os arquivos .java:
+   
+```bash
 java Main
+```
+
+3. Execute o arquivo principal:
+   
+```bash
+java Main
+```
+
+## 💠 Tecnologias utilizadas
+
+[![My Skills](https://skillicons.dev/icons?i=java&theme=light)](https://skillicons.dev) 
+
+
+
+## 📄 Licença
+
+  Este projeto é apenas para fins educacionais.
+
+---
+
+## 🎥 Vídeo explicativo
+
 
