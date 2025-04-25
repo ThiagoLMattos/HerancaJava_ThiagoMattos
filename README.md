@@ -13,7 +13,7 @@
 
 ## 📌 Introdução
 
-Sistema simples em Java para cadastro, listagem e execução de ações de funcionários, com base em herança e polimorfismo.  
+Sistema simples em Java para cadastro, listagem e execução de ações de funcionários, com base em herança.  
 Feito para fins de aprendizado e prática com Programação Orientada a Objetos (POO).
 
 ---
