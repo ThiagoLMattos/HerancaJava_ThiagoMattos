@@ -11,9 +11,10 @@ public class Main {
 
         do {
             
-            System.out.println("Menu:");
+            System.out.println("\n\nMenu:");
             System.out.println("1 - Cadastrar Funcionário");
             System.out.println("2 - Listar Funcionários");
+            System.out.println("3 - Realizar Ações");
             System.out.println("0 - Sair");
             System.out.print("Escolha uma opção: ");
             opcao = scanner.nextInt(); 
@@ -26,11 +27,15 @@ public class Main {
                 case 2:
                     gerenciador.listarFuncionarios(); 
                     break;
+            
+                case 3:
+                    gerenciador.executarAcoes();
+                    break;
                 case 0:
-                    System.out.println("Saindo...");
+                    System.out.println("\nSaindo...");
                     break;
                 default:
-                    System.out.println("Opção inválida.");
+                    System.out.println("\nOpção inválida.");
             }
         } while (opcao != 0); 
 

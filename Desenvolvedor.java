@@ -5,12 +5,12 @@ public class Desenvolvedor extends Funcionario {
     }
 
     public void programar() {
-        System.out.println(nome + " está programando.");
+        System.out.println("\n"+nome + " está programando.");
     }
 
     @Override
     public void mostrarDados() {
-        System.out.println("[Desenvolvedor]");
+        System.out.println("\n[Desenvolvedor]");
         super.mostrarDados();
     }
 }

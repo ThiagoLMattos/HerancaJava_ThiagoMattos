@@ -5,12 +5,12 @@ public class Estagiario extends Funcionario {
     }
 
     public void fazerTarefa() {
-        System.out.println(nome + " está fazendo uma tarefa.");
+        System.out.println("\n"+nome + " está fazendo uma tarefa.");
     }
 
     @Override
     public void mostrarDados() {
-        System.out.println("[Estagiário]");
+        System.out.println("\n[Estagiário]");
         super.mostrarDados();
     }
 }

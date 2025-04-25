@@ -5,12 +5,12 @@ public class Gerente extends Funcionario {
     }
 
     public void realizarReuniao() {
-        System.out.println(nome + " está realizando uma reunião.");
+        System.out.println("\n"+nome + " está realizando uma reunião.");
     }
 
     @Override
     public void mostrarDados() {
-        System.out.println("[Gerente]");
+        System.out.println("\n[Gerente]");
         super.mostrarDados();
     }
 }

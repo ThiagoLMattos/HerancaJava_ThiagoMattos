@@ -16,14 +16,11 @@ public  class Funcionario extends Pessoa {
         System.out.println("Departamento: " + departamento);
         System.out.println("CPF: " + cpf);
         System.out.println("Data de Nascimento: " + dataNascimento);
+        System.out.println("---------");
     }
 
     public void baterPonto() {
-        System.out.println(nome + " bateu o ponto.");
-    }
-
-    public String getNome() {
-        return nome;
+        System.out.println("\n"+nome + " bateu o ponto.");
     }
 }
 
