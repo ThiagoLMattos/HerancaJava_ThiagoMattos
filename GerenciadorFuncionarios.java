@@ -3,24 +3,25 @@ import java.util.Scanner;
 
 public class GerenciadorFuncionarios {
     
-    private ArrayList<Funcionario> funcionarios = new ArrayList<>();
-    private Scanner scanner = new Scanner(System.in);
+    private ArrayList<Funcionario> funcionarios = new ArrayList<>(); //Criação de uma ArrayLists de objetos da classe 'Funcionario'
+    private Scanner scanner = new Scanner(System.in); //Criação de um Scanner para entrada de dados
 
-    public void cadastrarFuncionario() {
+    public void cadastrarFuncionario() { //Interface
         System.out.println("\n\nEscolha o tipo de funcionário:");
         System.out.println("1 - Gerente");
         System.out.println("2 - Desenvolvedor");
         System.out.println("3 - Estagiário");
+        //Switch case para definir o tipo do funcionario
         
         int tipo = scanner.nextInt(); 
-        scanner.nextLine(); 
+        scanner.nextLine();  //Reinicia o scanner
 
         System.out.print("Nome: ");
         String nome = scanner.nextLine();
 
         System.out.print("Salário: ");
         double salario = scanner.nextDouble(); 
-        scanner.nextLine(); 
+        scanner.nextLine(); //Reinicia o scanner
 
         System.out.print("Departamento: ");
         String departamento = scanner.nextLine();
@@ -31,9 +32,10 @@ public class GerenciadorFuncionarios {
         System.out.print("Data de nascimento: ");
         String dataNascimento = scanner.nextLine();
 
-        Funcionario tipoFuncionario = null;
+        Funcionario tipoFuncionario = null; //Váriavel do tipo 'Funcionario' para armazenar o objeto criado conforme o tipo
 
-        switch (tipo) {
+        switch (tipo) { //Switch case para definir o tipo do funcionario 
+            //Com base no tipo de funcionário, armazena o objeto
             case 1:
                 tipoFuncionario = new Gerente(nome, salario, departamento, cpf, dataNascimento);
                 break;
@@ -44,10 +46,10 @@ public class GerenciadorFuncionarios {
                 tipoFuncionario = new Estagiario(nome, salario, departamento, cpf, dataNascimento);
                 break; 
             default:
-                System.out.println("znTipo inválido."); 
+                System.out.println("\nTipo inválido."); 
         }
 
-        if (tipoFuncionario != null) {
+        if (tipoFuncionario != null) { //Caso 'tipoFuncionario' adquira um valor, criar o objeto por meio do arraylist
             funcionarios.add(tipoFuncionario);
             System.out.println("\nFuncionário cadastrado com sucesso.");
         }
@@ -55,69 +57,64 @@ public class GerenciadorFuncionarios {
 
     public void listarFuncionarios() {
         if (funcionarios.isEmpty()) {
-            System.out.println("\nNenhum funcionário cadastrado.");
+            System.out.println("\nNenhum funcionário cadastrado."); //Caso não há funcionarios cadastrados, exibir a mensagem
             return;
         }
 
         int i = 1;
 
-        for (Funcionario tipoFuncionario : funcionarios) {
+        for (Funcionario tipoFuncionario : funcionarios) { //Foreach que percorre a lista de funcionários e mostra os dados
             System.out.println("\n"+ i+" - ");
-            tipoFuncionario.mostrarDados();
+            tipoFuncionario.mostrarDados(); //Utilizar o método do classe Pai 'Funcionario' que exibirá os dados de todos funcionários cadastrados, juntamente ao indice
             i++;
         }
     }
 
 
     public void executarAcoes() {
-        // Listar funcionários
-        listarFuncionarios();
+        listarFuncionarios(); //Exibe os funcionários cadastrados juntos ao índice
         
         System.out.print("\nEscolha o número do funcionário para realizar a ação: ");
         int escolhaFuncionario = scanner.nextInt();
-        scanner.nextLine(); // Limpar o buffer
+        scanner.nextLine(); //Reinicia o Scanner
 
-        // Verifica se a escolha é válida
-        if (escolhaFuncionario < 0 || escolhaFuncionario > funcionarios.size()) {
+        if (escolhaFuncionario < 1 || escolhaFuncionario > funcionarios.size()) { //Verificação se o índice existe
             System.out.println("\nFuncionário inválido.");
             return;
         }
 
-        Funcionario funcionarioEscolhido = funcionarios.get(escolhaFuncionario - 1); // Seleciona o funcionário
+        Funcionario funcionarioEscolhido = funcionarios.get(escolhaFuncionario - 1); //Seleciona o funcionário pelo índice / Correção do índice na interface para o índice do array
 
-        // Exibe o menu de ações
-        System.out.println("\n\nEscolha a ação para o funcionário: ");
+        System.out.println("\n\nEscolha a ação para o funcionário: "); //Opções
         System.out.println("1 - Bater ponto");
         System.out.println("2 - Realizar ação de Gerente");
         System.out.println("3 - Realizar ação de Desenvolvedor");
         System.out.println("4 - Realizar ação de Estagiário");
 
         int tipo = scanner.nextInt();
-        scanner.nextLine(); // Consumir a quebra de linha
+        scanner.nextLine();//Reinicia o Scanner
 
-        // Realiza a ação de acordo com a escolha do usuário
-        switch (tipo) {
+        switch (tipo) { //Switch case para realizar a ação escolhida
             case 1:
-                // Bate ponto para o funcionário selecionado
-                funcionarioEscolhido.baterPonto();
+                funcionarioEscolhido.baterPonto(); //Método da classe Pai 'Funcionario'
                 break;
             case 2:
-                if (funcionarioEscolhido instanceof Gerente) {
-                    ((Gerente) funcionarioEscolhido).realizarReuniao();
+                if (funcionarioEscolhido instanceof Gerente) { 
+                    ((Gerente) funcionarioEscolhido).realizarReuniao(); //Caso o funcionário escolhido seja um Gerente, realiza o método da classe 'Gerente'
                 } else {
                     System.out.println("\nEste funcionário não é um Gerente.");
                 }
                 break;
             case 3:
                 if (funcionarioEscolhido instanceof Desenvolvedor) {
-                    ((Desenvolvedor) funcionarioEscolhido).programar();
+                    ((Desenvolvedor) funcionarioEscolhido).programar(); //Caso o funcionário escolhido seja um Desenvolvedor, realiza o método da classe 'Desenvolvedor'
                 } else {
                     System.out.println("\nEste funcionário não é um Desenvolvedor.");
                 }
                 break;
             case 4:
                 if (funcionarioEscolhido instanceof Estagiario) {
-                    ((Estagiario) funcionarioEscolhido).fazerTarefa();
+                    ((Estagiario) funcionarioEscolhido).fazerTarefa(); //Caso o funcionário escolhido seja um Estagiário, realiza o método da classe 'Estagiário'
                 } else {
                     System.out.println("\nEste funcionário não é um Estagiário.");
                 }

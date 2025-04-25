@@ -1,14 +1,15 @@
-import java.util.Scanner;
+import java.util.Scanner; 
 
 public class Main {
     public static void main(String[] args) {
         
-        GerenciadorFuncionarios gerenciador = new GerenciadorFuncionarios();
+        GerenciadorFuncionarios gerenciador = new GerenciadorFuncionarios(); //Conexão com as funções GerenciadorFuncionarios.java
 
         
         Scanner scanner = new Scanner(System.in);
         int opcao;
 
+        //Laço de repetição para o menu, que chama os métodos localizados em GerenciadorFuncionarios.java
         do {
             
             System.out.println("\n\nMenu:");
