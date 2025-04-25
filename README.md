@@ -21,5 +21,8 @@ Feito para fins de aprendizado e prática com POO.
 
 1. Compile todos os arquivos `.java`:
 
-```bash
-javac -source 8 -target 8 *.java
+`javac -source 8 -target 8 *.java`
+
+2. Execute o arquivo principal `Main.java`:
+
+`java Main`
