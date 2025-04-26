@@ -8,6 +8,7 @@
 - [⚙️ Como instalar e executar](#%EF%B8%8F-como-instalar-e-executar)
 - [💠 Tecnologias utilizadas](#-tecnologias-utilizadas)
 - [📄 Licença](#-licença)
+- [🎥 Vídeo explicativo](#-vídeo-explicativo)
 
 ---
 
@@ -64,5 +65,5 @@ java Main
 ---
 
 ## 🎥 Vídeo explicativo
-
+   [Gerenciador de Funcionarios Video](https://drive.google.com/file/d/1-dhyFSRw8ZxQE6abNHycg6HYR3v0ac4p/view?usp=sharing)
 
