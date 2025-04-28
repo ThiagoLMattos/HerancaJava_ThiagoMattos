@@ -36,7 +36,7 @@ Feito para fins de aprendizado e prática com Programação Orientada a Objetos 
 1. Clone o repositório:
 
 ```bash
-git clone https://github.com/seu-usuario/gerenciador-funcionarios.git
+git clone https://github.com/ThiagoLMattos/HerancaJava_ThiagoMattos.git
 cd gerenciador-funcionarios
 ```
 
