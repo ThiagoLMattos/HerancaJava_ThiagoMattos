@@ -1,7 +1,7 @@
 public  class Funcionario extends Pessoa {
-    protected String nome;
-    protected double salario;
-    protected String departamento;
+    public String nome;
+    public double salario;
+    public String departamento;
 
     //Construtor padrão com atributos herdados da classe Pai 'Pessoa'
     public Funcionario(String nome, double salario, String departamento, String cpf, String dataNascimento) {
