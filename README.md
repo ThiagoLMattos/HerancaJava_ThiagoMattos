@@ -43,7 +43,7 @@ cd gerenciador-funcionarios
 2. Compile todos os arquivos .java:
    
 ```bash
-java Main
+javac *.java
 ```
 
 3. Execute o arquivo principal:
