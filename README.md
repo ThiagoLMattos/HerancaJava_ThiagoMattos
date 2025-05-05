@@ -37,7 +37,7 @@ Feito para fins de aprendizado e prática com Programação Orientada a Objetos 
 
 ```bash
 git clone https://github.com/ThiagoLMattos/HerancaJava_ThiagoMattos.git
-cd gerenciador-funcionarios
+cd HerancaJava_ThiagoMattos
 ```
 
 2. Compile todos os arquivos .java:
